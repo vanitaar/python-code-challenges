@@ -68,3 +68,40 @@ print(movie_review(4))
 # "Avoid at all costs!"
 print(movie_review(6))
 # "This one was fun."
+
+# Qn 10
+# Create a function called max_num() that has three parameters named num1, num2, and num3.
+# The function should return the largest of these three numbers. 
+# If any of two numbers tie as the largest, you should return "It's a tie!".
+
+def max_num(num1, num2, num3):
+  num_max = max(num1, num2, num3)
+  if num_max == num1 and num1 == num2 or num1 == num3:
+    return "It's a tie!"
+  elif num_max == num2 and num2 == num1 or num2 == num3:
+    return "It's a tie!"
+  elif num_max == num3 and num3 == num1 or num3 == num2:
+    return "It's a tie!" 
+  else:
+    return num_max
+
+print(max_num(-10, 0, 10))
+# 10
+print(max_num(-10, 5, -30))
+# 5
+print(max_num(-5, -10, -10))
+# "It's a tie!" should be -5
+
+### suggested answer
+def max_num2(num1, num2, num3):
+  if num1 > num2 and num1 > num3:
+    return num1
+  elif num2 > num1 and num2 > num3:
+    return num2
+  elif num3 > num1 and num3 > num2:
+    return num3
+  else:
+    return "It's a tie!"
+
+print(max_num2(-10, 5, 5)) #It's a tie!
+print(max_num2(-5, -10, -10))# -5
