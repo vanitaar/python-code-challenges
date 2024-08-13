@@ -37,7 +37,7 @@ print(same_name("Tina", "Amber"))
 # Using an if statement, your variable num, and the operators >, and <, 
 # make it so your function will return False no matter what number is stored in num.
 
-ef always_false(num):
+def always_false(num):
   if num > 0 or num < 0 or num == 0:
     return False
 
@@ -46,3 +46,4 @@ print(always_false(0)) # False
 print(always_false(-5)) # False
 
 print(always_false(90)) # False
+
