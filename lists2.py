@@ -71,3 +71,26 @@ def double_index(my_list, index):
 print(double_index([1, 2, 3, 4], 4)) 
 print(double_index([1, 2, 3, 4], 2)) 
 print(double_index([3, 8, -10], 2))
+
+
+#Qn 10
+# Create a function called middle_element that has one parameter named my_list.
+
+# If there are an odd number of elements in my_list, the function should return the middle element. 
+# If there are an even number of elements, the function should return the average of the middle two elements.
+
+def middle_element(my_list):
+    if len(my_list) % 2 != 0:
+        #len 7 --> 4th --> i3 #len 5 --> 3rd --> i2 #len 3 --> 2nd --> i1
+        return my_list[int(((len(my_list) + 1) / 2) - 1)] 
+    # OR
+    # return my_list[int(len(my_list)/2)] # 7/2=3.5 =int=> 3
+    
+    else:
+        #len 4 --> 2nd & 3rd --> i1 & i2
+        mid1 = my_list[int((len(my_list) / 2) - 1)]
+        mid2 = my_list[int((len(my_list) / 2))]
+        return (mid1 + mid2) / 2
+
+print(middle_element([5, 2, -10, -4, 4, 5]))
+print(middle_element([5, 2, -10, 4, 5]))
