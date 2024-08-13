@@ -31,3 +31,18 @@ print(same_name("Colby", "Colby"))
 # should print True
 print(same_name("Tina", "Amber"))
 # should print False
+
+# Qn 8
+# Create a function named always_false() that has one parameter named num.
+# Using an if statement, your variable num, and the operators >, and <, 
+# make it so your function will return False no matter what number is stored in num.
+
+ef always_false(num):
+  if num > 0 or num < 0 or num == 0:
+    return False
+
+print(always_false(0)) # False
+
+print(always_false(-5)) # False
+
+print(always_false(90)) # False
