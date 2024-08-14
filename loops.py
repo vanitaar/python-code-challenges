@@ -57,3 +57,46 @@ def delete_starting_evens(my_list):
 print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
 print(delete_starting_evens([4, 8, 10]))
 print(delete_starting_evens([]))
+
+# Qn 4
+# Create a function named odd_indices() that has one parameter named my_list.
+
+# The function should create a new empty list and 
+# add every element from my_list that has an odd index. 
+# The function should then return this new list.
+
+# For example, odd_indices([4, 3, 7, 10, 11, -2]) should return the list [3, 10, -2].
+
+def odd_indices(my_list):
+    #list comprehension
+    new_list = [my_list[i] for i in range(1, len(my_list), 2)]
+    # use range(start at 1, stop b4 len(my_list), step 2)
+    return new_list
+
+print(odd_indices([4, 3, 7, 10, 11, -2]))
+
+# Qn 5
+# Create a function named exponents() that takes two lists as parameters named bases and powers. 
+# Return a new list containing every number in bases raised to every number in powers.
+
+def exponents(bases, powers):
+    new_list = []
+    for base in bases:
+        for power in powers:
+            new_list.append(base ** power)
+    return new_list
+
+print(exponents([2, 3, 4], [1, 2, 3]))
+
+# Bonus Qn 
+#Extract odd numbers into separate list
+def odd_numbers(my_list):
+    #list comprehension
+    odd_list = [num for num in my_list if (num % 2 != 0)]
+    # odd_list = []
+    # for num in my_list:
+    #     if num % 2 != 0:
+    #         odd_list.append(num)
+    return odd_list
+
+print(odd_numbers([4, 3, 7, 10, 11, -2]))
