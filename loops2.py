@@ -60,3 +60,43 @@ print(over_nine_thousand([8000, 1000, 200, 300]))  # Output: 9000
 print(over_nine_thousand([1000, 2000, 3000, 4000]))  # Output: 10000
 print(over_nine_thousand([]))  # Output: 0
 print(over_nine_thousand([8000, 900, 120, 5000])) # Output: 9020
+
+
+# Qn 8
+# Create a function named max_num() that takes 
+# a list of numbers named nums as a parameter.
+
+# The function should return the largest number in nums
+
+def max_num(nums):
+    # return max(nums)
+    max = nums[0]
+    for num in nums:
+        if num > max:
+            max = num
+    return max
+
+print(max_num([50, -10, 0, 75, 20]))
+
+# Qn 9
+# Write a function named same_values() that 
+# takes two lists of numbers of equal size as parameters.
+
+# The function should return a *list of the indices* 
+# where the values were equal in lst1 and lst2.
+
+def same_values(lst1, lst2):
+    if len(lst1) != len(lst2):
+        return "Invalid inputs: list length not same"
+    
+    indices = []
+        
+    for i in range(0, len(lst1)):
+            if lst1[i] == lst2[i]:
+                indices.append(i)
+    return indices
+
+print(same_values([1, 2, 3], [4, 5, 6])) #[]
+print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5])) #[0, 2, 3]
+print(same_values([5, 1, -10], [5, 10, -10, 3, 5])) #"Invalid..."
+
