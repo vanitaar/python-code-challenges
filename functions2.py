@@ -85,3 +85,15 @@ def get_length(str):
   for char in str:
     len += 1
   return len
+
+# keyword IN AND NOT
+
+def common_letters(string_one, string_two):
+  common = []
+  for letter in string_one:
+    # if (letter in string_two) and common.count(letter) == 0:
+    if (letter in string_two) and not (letter in common):
+      common.append(letter)
+  return common
+
+print(common_letters("banana", "cream"))
