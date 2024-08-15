@@ -73,4 +73,15 @@ def lots_of_math(a, b, c, d):
     return ((sum * minus) % a)
 
 print(lots_of_math(1, 2, 3, 4))
-    
+
+
+# EXTRA
+
+# BTS len function --> uses a for loop
+
+def get_length(str):
+  # return len(str)
+  len = 0
+  for char in str:
+    len += 1
+  return len
