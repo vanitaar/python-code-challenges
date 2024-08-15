@@ -174,3 +174,12 @@ print(reversed_list([1, 2, 3], [3, 2, 1, 0]))  # Output: Invalid inputs: list le
     
 #     for name in names:
 #         print(name)
+
+
+# using set
+# colors = []
+# for color in thread_sold_split:
+#     if color not in colors:
+#         colors.append(color)
+
+# colors = list(set(thread_sold_split))
