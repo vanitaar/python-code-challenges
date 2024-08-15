@@ -129,3 +129,48 @@ print(reversed_list([1, 2, 3], [3, 2, 1]))  # Output: True
 print(reversed_list([1, 2, 3], [1, 2, 3]))  # Output: False
 print(reversed_list([1, 5, 3], [3, 2, 1])) # Output: False
 print(reversed_list([1, 2, 3], [3, 2, 1, 0]))  # Output: Invalid inputs: list length not same
+
+
+# nested lists, loops, list comprehension
+
+# if __name__ == '__main__':
+#     records = []
+#     scores = []
+#     names = []
+#     for _ in range(int(input())):
+#         name = input()
+#         score = float(input())
+#         records.append([name, score])
+#         scores.append(score)
+    
+#     # print(records)
+#     # print(scores)
+#     min_num = min(scores)
+#     scores = [num for num in scores if num != min_num]
+#     # print(scores)
+#     second_min = min(scores)
+    
+#     for student in records:
+#         if student[1] == second_min:
+#             names.append(student[0])
+#     # names = sorted(names)
+#     names.sort()
+#     for name in names:
+#         print(name)
+
+# #######
+# if __name__ == '__main__':
+#     records = []
+#     for _ in range(int(input())):
+#         name = input()
+#         score = float(input())
+#         records.append([name, score])
+    
+#     scores = [record[1] for record in records]
+#     min_num = min(scores)
+#     second_min = min(score for score in scores if score != min_num)
+    
+#     names = sorted([record[0] for record in records if record[1] == second_min])
+    
+#     for name in names:
+#         print(name)
