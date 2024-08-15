@@ -97,3 +97,20 @@ def common_letters(string_one, string_two):
   return common
 
 print(common_letters("banana", "cream"))
+
+def reversed(str):
+    reversed_str = ""
+    for i in range(1, len(str) + 1):
+        reversed_str += str[-i]
+    return reversed_str
+    
+print(reversed("AbeSimp"))
+
+  
+# -1 0 1 2 3 4 ...
+def shift_to_right(str):
+    shifted = ""
+    for i in range(0, len(str)):
+        shifted += str[i-1]
+    return shifted
+print(shift_to_right("AbeSimp"))
