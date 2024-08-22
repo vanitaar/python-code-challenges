@@ -183,3 +183,18 @@ print(reversed_list([1, 2, 3], [3, 2, 1, 0]))  # Output: Invalid inputs: list le
 #         colors.append(color)
 
 # colors = list(set(thread_sold_split))
+
+## MATCH-CASE STATEMENTS
+# efficient alternative to if-elif-else statements
+# check for different conditions on Python objects like lists, tuples, and strings.
+
+user_name = "Dave"  
+match user_name:  
+    case "Dave":  
+        print("Get off my computer Dave!")  
+    case "angela_catlady_87":  
+        print("I know it is you, Dave! Go away!")   
+    case "Codecademy":  
+        print("Access Granted.")  
+    case default:  
+        print("Username not recognized.")  
