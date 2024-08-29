@@ -51,3 +51,9 @@ def count_multi_char_x_2(word, x):
 
 print(count_multi_char_x_2("mississippi", "iss"))
 print(count_multi_char_x_2("apple", "pp"))
+
+# another way - split method
+
+# def count_multi_char_x(word, x):
+#   splits = word.split(x)
+#   return(len(splits)-1)
