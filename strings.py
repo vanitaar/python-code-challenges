@@ -19,3 +19,15 @@ def unique_english_letters2(word):
         if letter in word:
             uniques += 1
     return uniques
+
+# 2 Count X
+
+def count_char_x(word, x):
+    count = 0
+    for letter in word:
+        if letter == x:
+            count += 1
+    return count
+
+print(count_char_x("mississippi", "s"))
+print(count_char_x("mississippi", "m"))
