@@ -120,3 +120,25 @@ print(x_length_words("he likes apples.", 2)) # True
 print(x_length_words("this is a, sentence.", 1)) # True
 print(x_length_words("randomly worded sentence.", 8)) # False
 
+# Qn 6 
+# Write a function called check_for_name that takes two strings 
+# as parameters named sentence and name. 
+# The function should return True if name appears in sentence in all lowercase letters, 
+# all uppercase letters, or with any mix of uppercase and lowercase letters. 
+# The function should return False otherwise.
+
+def check_for_name(sentence, name):
+    # convert both params to same case
+    sentence_lower = sentence.lower()
+    name_lower = name.lower()
+    # using find method instead of manually doing a for loop
+    if sentence_lower.find(name_lower) == -1:
+        return False
+    return True
+
+
+print("-----")
+print(check_for_name("My name is Jamie", "Jamie"))
+print(check_for_name("My name is jamie", "Jamie"))
+print(check_for_name("My name is JAMIE", "Jamie"))
+print(check_for_name("My name is JAMeE", "Jamie"))
