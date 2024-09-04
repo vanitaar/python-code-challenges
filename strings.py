@@ -99,3 +99,24 @@ print(x_length_words("he likes apples", 2)) # True
 print(x_length_words("this is a sentence", 1)) # True
 print(x_length_words("randomly worded sentence", 8)) # False
 
+# BONUS: if have punctuations in sentence? --> affects len(word)
+
+def x_length_words(sentence, x):
+    words = sentence.split(" ")
+    # return words
+    # cleaned_words = []
+    for word in words:
+    # filter out non-alphanumeric characters using built-in python method
+        filtered_chars = filter(str.isalnum, word)
+        cleaned_word = ''.join(filtered_chars)
+        # cleaned_words.append(cleaned_word)
+        if len(cleaned_word) < x:
+            return False
+    return True
+    # return cleaned_words
+
+print(x_length_words("i like apples.", 2)) # False
+print(x_length_words("he likes apples.", 2)) # True
+print(x_length_words("this is a, sentence.", 1)) # True
+print(x_length_words("randomly worded sentence.", 8)) # False
+
