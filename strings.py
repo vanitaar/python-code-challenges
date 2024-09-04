@@ -57,3 +57,25 @@ print(count_multi_char_x_2("apple", "pp"))
 # def count_multi_char_x(word, x):
 #   splits = word.split(x)
 #   return(len(splits)-1)
+
+# Q 4 Substring Between
+# """
+# Write a function named substring_between_letters that 
+# takes a string named word, a single character named start, and another character named end.
+# This function should return the substring between the first occurrence of start and end in word. 
+# If start or end are not in word, the function should return word.
+# For example, substring_between_letters("apple", "p", "e") should return "pl".
+# """
+
+def substr_btw_letters(word, start, end):
+    idx_start = word.find(start)
+    idx_end = word.find(end)
+    if idx_start == -1 or idx_end == -1:
+        return word
+    # return idx_start, idx_end
+    return word[idx_start + 1: idx_end]
+
+
+print(substr_btw_letters("apple", "p", "e")) # pl
+print(substr_btw_letters("apple", "p", "c")) # apple
+
