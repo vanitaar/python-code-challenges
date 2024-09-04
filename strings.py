@@ -127,18 +127,24 @@ print(x_length_words("randomly worded sentence.", 8)) # False
 # all uppercase letters, or with any mix of uppercase and lowercase letters. 
 # The function should return False otherwise.
 
-def check_for_name(sentence, name):
-    # convert both params to same case
-    sentence_lower = sentence.lower()
-    name_lower = name.lower()
-    # using find method instead of manually doing a for loop
-    if sentence_lower.find(name_lower) == -1:
-        return False
-    return True
+# def check_for_name(sentence, name):
+#     # convert both params to same case
+#     sentence_lower = sentence.lower()
+#     name_lower = name.lower()
+#     # using find method instead of manually doing a for loop
+#     if sentence_lower.find(name_lower) == -1:
+#         return False
+#     return True
 
+
+# Recall! the IN keyword --> returns boolean
+
+def check_for_name(sentence, name):
+  return name.lower() in sentence.lower()
 
 print("-----")
-print(check_for_name("My name is Jamie", "Jamie"))
-print(check_for_name("My name is jamie", "Jamie"))
-print(check_for_name("My name is JAMIE", "Jamie"))
-print(check_for_name("My name is JAMeE", "Jamie"))
+print(check_for_name("My name is Jamie", "Jamie")) # True
+print(check_for_name("My name is jamie", "Jamie")) # True
+print(check_for_name("My name is JAMIE", "Jamie")) # True
+print(check_for_name("My name is JAMeE", "Jamie")) # False
+print(check_for_name("My name is Samantha", "Jamie")) # False
