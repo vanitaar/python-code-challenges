@@ -37,3 +37,33 @@ def add_ten(dict):
 print("--Q3--")
 print(add_ten({1:5, 2:2, 3:3}))
 print(add_ten({10:1, 100:2, 1000:3}))
+
+# Q 4
+# This function should return a list of all values in the dictionary that are also keys.
+
+def values_that_are_keys(dict):
+    my_list = []
+    for value in dict.values():
+        if value in dict:
+            my_list.append(value)
+    return my_list
+
+print("--Q4--")
+print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
+print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
+
+
+# Q 5 
+
+def find_max_key(dict):
+    max_key = 0
+    max_value = 0
+    for key, value in dict.items():
+        if value > max_value:
+            max_value = value
+            max_key = key
+    return max_key
+    
+print("--Q5--")    
+print(find_max_key({1:100, 2:1, 3:4, 4:10}))
+print(find_max_key({"a":100, "b":10, "c":1000}))
