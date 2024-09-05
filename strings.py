@@ -29,6 +29,7 @@ def count_char_x(word, x):
             count += 1
     return count
 
+print("--Q2--")
 print(count_char_x("mississippi", "s"))
 print(count_char_x("mississippi", "m"))
 
@@ -41,6 +42,7 @@ def count_multi_char_x(word, x):
             count += 1
     return count
 
+print("--Q3--")
 print(count_multi_char_x("mississippi", "iss"))
 print(count_multi_char_x("apple", "pp"))
 
@@ -75,7 +77,7 @@ def substr_btw_letters(word, start, end):
     # return idx_start, idx_end
     return word[idx_start + 1: idx_end]
 
-
+print("--Q4--")
 print(substr_btw_letters("apple", "p", "e")) # pl
 print(substr_btw_letters("apple", "p", "c")) # apple
 
@@ -93,7 +95,7 @@ def x_length_words(sentence, x):
             return False
     return True
 
-
+print("--Q5--")
 print(x_length_words("i like apples", 2)) # False
 print(x_length_words("he likes apples", 2)) # True
 print(x_length_words("this is a sentence", 1)) # True
@@ -142,9 +144,27 @@ print(x_length_words("randomly worded sentence.", 8)) # False
 def check_for_name(sentence, name):
   return name.lower() in sentence.lower()
 
-print("-----")
+print("--Q6--")
 print(check_for_name("My name is Jamie", "Jamie")) # True
 print(check_for_name("My name is jamie", "Jamie")) # True
 print(check_for_name("My name is JAMIE", "Jamie")) # True
 print(check_for_name("My name is JAMeE", "Jamie")) # False
 print(check_for_name("My name is Samantha", "Jamie")) # False
+
+# Qn 7
+# Create a function named every_other_letter that takes a string named word as a parameter. 
+# The function should return a string containing every other letter in word.
+
+def every_other_letter(word):
+    if word == "" or type(word) == int:
+        return "invalid parameter!"
+    new_word = ""
+    for i in range(0, len(word), 2):
+        new_word += word[i]
+    return new_word
+
+print("--Q7--")
+print(every_other_letter("Coding School"))
+print(every_other_letter("Hello world!"))
+print(every_other_letter(""))
+print(every_other_letter(5))
