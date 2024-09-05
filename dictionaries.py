@@ -126,3 +126,21 @@ def unique_values(my_dict):
 print("--Q8--")
 print(unique_values({0:3, 1:3, 4:3, 5:3}))
 print(unique_values({0:3, 1:1, 4:1, 5:3}))
+
+# Q 9
+# This function accepts a dictionary where the keys are last names 
+# and the values are lists of first names of people who have that last name. 
+# We need to calculate the number of people who have the same first letter in their last name
+
+def count_same_last_name_initial(names):
+    initials = {}
+    for last_name in names:
+        initial_letter = last_name[0]
+        if initial_letter not in initials:
+            initials[initial_letter] = 0
+        initials[initial_letter] += len(names[last_name])
+    return initials
+
+print("--Q9--")
+print(count_same_last_name_initial({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Lannister": ["Jaime", "Cersei", "Tywin"]}))
+print(count_same_last_name_initial({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
