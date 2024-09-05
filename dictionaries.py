@@ -94,13 +94,21 @@ print(word_length_dict(["a", ""]))
 # Write a function named frequency_dictionary that takes a list of elements named words as a parameter.
 # The function should return a dictionary containing the frequency of each element in words.
 
+# def frequency_dictionary(words):
+#     freq_dict = {}
+#     for word in words:
+#         freq_dict[word] = words.count(word)
+#     return freq_dict
+
+# alt soln w/o count method - more efficient for larger lists -- O(n) -- only iterates thru list once
+# v/s using count in for loop -- O(n^2)
 def frequency_dictionary(words):
-    freq_dict = {}
-    for word in words:
-        freq_dict[word] = words.count(word)
-    return freq_dict
-
-
+  freqs = {}
+  for word in words:
+    if word not in freqs:
+      freqs[word] = 0
+    freqs[word] += 1
+  return freqs
 
 print("--Q7--")
 print(frequency_dictionary(["apple", "apple", "cat", 1]))
