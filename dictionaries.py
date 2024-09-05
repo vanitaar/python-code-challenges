@@ -56,8 +56,10 @@ print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
 # Q 5 
 
 def find_max_key(dict):
-    max_key = 0
-    max_value = 0
+    # max_key = 0
+    max_key = float("-inf")
+    # max_value = 0
+    max_value = float("-inf")
     for key, value in dict.items():
         if value > max_value:
             max_value = value
@@ -67,3 +69,7 @@ def find_max_key(dict):
 print("--Q5--")    
 print(find_max_key({1:100, 2:1, 3:4, 4:10}))
 print(find_max_key({"a":100, "b":10, "c":1000}))
+print(find_max_key({"a":100, "b":10, "c":-1000}))
+
+# prev soln only woorks for int >= 0
+# using float("-inf") in order to initialize them to the lowest possible value.
