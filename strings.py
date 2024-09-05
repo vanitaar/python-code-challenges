@@ -189,3 +189,14 @@ def reverse_string2(word):
 
 print(reverse_string2("Coding and Progamming"))
 print(reverse_string2("Hello world!"))
+
+# Q 9
+# Write a function called make_spoonerism that takes two strings as parameters named word1 and word2.  
+# we’re going to switch the first letters of each word. 
+# Return the two new words as a single string separated by a space.
+
+def make_spoonerism(word1, word2):
+    return word2[0]+word1[1:]+" "+word1[0]+word2[1:]
+
+print("--Q9--")
+print(make_spoonerism("Jelly", "Bean"))
