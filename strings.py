@@ -168,3 +168,24 @@ print(every_other_letter("Coding School"))
 print(every_other_letter("Hello world!"))
 print(every_other_letter(""))
 print(every_other_letter(5))
+
+# Q 8
+
+def reverse_string(word):
+    reversed_word = ""
+    for i in range(1, len(word) + 1):
+        reversed_word += word[-i]
+    return reversed_word
+print("--Q8--")
+print(reverse_string("Coding and Progamming"))
+print(reverse_string("Hello world!"))
+
+# alt soln
+def reverse_string2(word):
+  reverse = ""
+  for i in range(len(word)-1, -1, -1):
+    reverse += word[i]
+  return reverse
+
+print(reverse_string2("Coding and Progamming"))
+print(reverse_string2("Hello world!"))
