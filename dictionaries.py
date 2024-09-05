@@ -113,3 +113,16 @@ def frequency_dictionary(words):
 print("--Q7--")
 print(frequency_dictionary(["apple", "apple", "cat", 1]))
 print(frequency_dictionary([0,0,0,0,0]))
+
+# Q 8
+
+def unique_values(my_dict):
+    uniques = []
+    for value in my_dict.values():
+        if value not in uniques:
+            uniques.append(value)
+    return len(uniques)
+
+print("--Q8--")
+print(unique_values({0:3, 1:3, 4:3, 5:3}))
+print(unique_values({0:3, 1:1, 4:1, 5:3}))
