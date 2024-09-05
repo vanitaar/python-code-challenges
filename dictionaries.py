@@ -73,3 +73,19 @@ print(find_max_key({"a":100, "b":10, "c":-1000}))
 
 # prev soln only woorks for int >= 0
 # using float("-inf") in order to initialize them to the lowest possible value.
+
+# Q 6
+# a function that creates a new dictionary based on a list of strings. 
+# The keys of our dictionary will be every string in our list of strings, while 
+# the values will be the length of each of the words in the string list. 
+
+def word_length_dict(strings):
+    my_dict = {}
+    for string in strings:
+        my_dict[string] = len(string)
+    return my_dict
+
+print("--Q6--")
+print(word_length_dict(["apple", "dog", "cat"]))
+print(word_length_dict(["a", ""]))
+
