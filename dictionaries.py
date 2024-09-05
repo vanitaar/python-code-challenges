@@ -89,3 +89,19 @@ print("--Q6--")
 print(word_length_dict(["apple", "dog", "cat"]))
 print(word_length_dict(["a", ""]))
 
+
+# Q 7
+# Write a function named frequency_dictionary that takes a list of elements named words as a parameter.
+# The function should return a dictionary containing the frequency of each element in words.
+
+def frequency_dictionary(words):
+    freq_dict = {}
+    for word in words:
+        freq_dict[word] = words.count(word)
+    return freq_dict
+
+
+
+print("--Q7--")
+print(frequency_dictionary(["apple", "apple", "cat", 1]))
+print(frequency_dictionary([0,0,0,0,0]))
