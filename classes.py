@@ -63,6 +63,10 @@ class DriveBot:
         self.id = DriveBot.robot_count
         print(f"robot {id} created")
     
+    # 6 repr method
+    def __repr__(self):
+        return f'Robot {self.id} with speed of {self.motor_speed} miles per hr and sensor range of {self.sensor_range} feet'
+    
     def control_bot(self, new_speed, new_dir):
         self.motor_speed = new_speed
         self.direction = new_dir
@@ -96,6 +100,10 @@ print(robot_3.all_disabled)
 print(robot_1.id)
 print(robot_2.id)
 print(robot_3.id)
+
+print(robot_1)
+print(robot_2)
+print(robot_3)
 
 # ## Different ways to use constructor:
 # # sensor_range defaults to 10
