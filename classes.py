@@ -46,6 +46,11 @@
 # 3 Enhance constructor
 
 class DriveBot: 
+    # 4 add class variables
+    all_disabled = False
+    latitude = -999999
+    longitude = -999999
+    
     def __init__(self, motor_speed = 0, direction = 180, sensor_range = 10):
         self.motor_speed = motor_speed
         self.direction = direction
@@ -72,12 +77,22 @@ print(robot_2.motor_speed)
 print(robot_2.direction)
 print(robot_2.sensor_range)
 
-## Different ways to use constructor:
-# sensor_range defaults to 10
-test_bot_1 = DriveBot(10, 270) 
-# direction defaults to 180
-test_bot_2 = DriveBot(sensor_range = 20, motor_speed = 45) 
-# direction defaults to 180 and sensor_range defaults to 10
-test_bot_3 = DriveBot(50) 
-# all default values are used
-test_bot_4 = DriveBot() 
+robot_3 = DriveBot(20, 60, 10)
+
+DriveBot.all_disabled = True
+DriveBot.latitude = -50.0
+DriveBot.longitude = 50.0
+
+print(robot_1.latitude)
+print(robot_2.longitude)
+print(robot_3.all_disabled)
+
+# ## Different ways to use constructor:
+# # sensor_range defaults to 10
+# test_bot_1 = DriveBot(10, 270) 
+# # direction defaults to 180
+# test_bot_2 = DriveBot(sensor_range = 20, motor_speed = 45) 
+# # direction defaults to 180 and sensor_range defaults to 10
+# test_bot_3 = DriveBot(50) 
+# # all default values are used
+# test_bot_4 = DriveBot() 
